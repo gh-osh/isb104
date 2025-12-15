@@ -1,7 +1,8 @@
 record_id,1113,1114,1115,1116,1117,1118,1119,1120,1121,1122,1123,1124,1125,1126,1127,1128,1129,1130,1131,1132,1133
 redcap_event_name,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1,baseline_arm_1
-dm_sex_code,1,1,1,2,2,1,1,2,1,2,2,1,1,1,2,2,2,1,2,1,1
+dm_sex_code,Male,Male,Ma;e,Female,Female,Male,Male,Female,Male,Female,Female,Male,Male,Male,Female,Female,Female,Male,Female,Male,Male
 dm_age_years,72,68,55,55,73,70,58,79,57,65,68,74,77,59,69,80,64,71,59,80,80
 dm_death,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 dm_death_date,,,,,,,,,,,,,,,,,,,,,
+
 demographics_complete,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
