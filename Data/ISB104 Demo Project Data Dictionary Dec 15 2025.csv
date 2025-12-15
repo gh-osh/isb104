@@ -1,0 +1,19 @@
+"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
+record_id,demographics,,text,"Record ID",,,,,,,,,,,,,
+dm_sex_code,demographics,,radio,Sex,"1, Male | 2, Female",,,,,,,,,,,,
+dm_age_years,demographics,,text,"Age at inclusion",,years,number,0,110,,,,,,,," @FORCE-MINMAX"
+dm_death,demographics,,yesno,Death?,,,,,,,,,,,,,
+dm_death_date,demographics,,text,"Date of death",,,date_ymd,,,,"[dm_death] = '1'",,,,,,
+diag_cohort_code,diagnosis,,radio,"Primary cohort","1, PD | 2, Healthy Control | 3, SWEDD | 4, Prodromal | 5, Non-manifesting carrier",,,,,,,,,,,,
+diag_pd_subtype_cd,diagnosis,,radio,"PD Subtype","1, Sporadic | 2, LRRK2 | 3, GBA",,,,,,"[diag_cohort_code] = '1'",,,,,,
+diag_prodromal_cd,diagnosis,,radio,"Prodromal Subtype","1, RBD | 2, Hyposmia (<=15th pct)",,,,,,"[diag_cohort_code] = '4'",,,,,,
+diag_dat_sbr_lp,diagnosis,,text,"DAT-SPECT spatial-specific binding ratio (SBR) , lower putamen",,,number,0,1.5,,,,,,,," @FORCE-MINMAX"
+visit_date,visit,,text,"Date of visit",,,date_ymd,2016-01-01,2024-12-31,,,,,,,,
+med_started,medications,,yesno,"<div class=""rich-text-field-label""><p>Started anti-parkinsonian medication <span style=""text-decoration: underline;"">at or before</span> this visit?</p></div>",,,,,,,,,RH,,,,
+med_class_cd,medications,,checkbox,"Medication class(es)","1, Levodopa | 2, Dopamine agonist | 3, MAO-B inhibitor",,,,,,"[med_started] = '1'",,,,,,
+med_ledd_mg,medications,,text,"Levodopa equivalent daily dose (LEDD)",,mg/day,number,0,10000,,"[med_started] = '1'",,,,,," @FORCE-MINMAX"
+upsit_pct,questionnaires,,text,"UPSIT total score",,"percentile (%)",number,0,100,,,,,,,," @FORCE-MINMAX"
+mds_updrs_i,questionnaires,,text,"MDS-UPDRS Part I total score",,,integer,0,52,,,,,,,," @FORCE-MINMAX"
+mds_updrs_ii,questionnaires,,text,"MDS-UPDRS Part 2 total score",,,integer,0,52,,,,,,,," @FORCE-MINMAX"
+mds_updrs_iii,questionnaires,,text,"MDS-UPDRS Part 3 total score",,,integer,0,132,,,,,,,," @FORCE-MINMAX"
+biomkr_saa_code,biomarkers,,radio,"Alpha-synuclein seed amplification assay (SAA) result","0, Negative | 1, Positive",,,,,,,,,,,,
